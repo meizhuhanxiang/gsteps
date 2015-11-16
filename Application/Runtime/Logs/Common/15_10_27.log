@@ -1,0 +1,66 @@
+[ 2015-10-27T00:57:07+08:00 ] 185.25.151.159 http://testp4.pospr.waw.pl/testproxy.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000371s ]
+ERR: 无法加载模块:Testproxy
+
+[ 2015-10-27T05:24:52+08:00 ] 207.46.13.136 /robots.txt
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000314s ]
+ERR: 无法加载模块:Robots
+
+[ 2015-10-27T07:48:03+08:00 ] 101.226.168.223 /robots.txt
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000382s ]
+ERR: 无法加载模块:Robots
+
+[ 2015-10-27T08:10:38+08:00 ] 123.125.71.77 /hack.php?H_name=bank
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000328s ]
+ERR: 无法加载模块:Hack
+
+[ 2015-10-27T11:44:23+08:00 ] 207.46.13.82 /robots.txt
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000328s ]
+ERR: 无法加载模块:Robots
+
+[ 2015-10-27T11:47:06+08:00 ] 207.46.13.82 /user.php?act=register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+ERR: 无法加载模块:User
+
+[ 2015-10-27T11:51:59+08:00 ] 91.196.50.33 http://testp3.pospr.waw.pl/testproxy.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000425s ]
+ERR: 无法加载模块:Testproxy
+
+[ 2015-10-27T16:57:57+08:00 ] 123.125.71.75 /robots.txt
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+ERR: 无法加载模块:Robots
+
+[ 2015-10-27T17:28:19+08:00 ] 123.125.71.49 /sort.php?action=article
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000372s ]
+ERR: 无法加载模块:Sort
+
+[ 2015-10-27T18:52:55+08:00 ] 23.110.80.42 http://www.sogou.com/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+ERR: 无法加载模块:Index
+
+[ 2015-10-27T21:41:29+08:00 ] 185.25.151.159 http://testp5.mielno.lubin.pl/testproxy.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000320s ]
+ERR: 无法加载模块:Testproxy
+

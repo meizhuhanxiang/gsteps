@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>G-STEPS CREW</title>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport">
+
+<link href="__PUBLIC__/css/common.css" rel="stylesheet" type="text/css" />
+<script src="__PUBLIC__/adminlte/plugins/jQuery/jQuery-2.1.4.min.js"
+	type="text/javascript"></script>
+<script src="__PUBLIC__/adminlte/bootstrap/js/bootstrap.min.js"
+	type="text/javascript"></script>
+</head>
+<body>
+	<div class="title">
+		<table>
+			<tr>
+				<td class="left"><label></label></td>
+				<td class="center"><img src="__PUBLIC__/img/u-img1.jpg" width="94" height="34" /></td>
+				<td class="right"><label onclick="loginOut(this)"
+					style="border-width: 0px;">退出</label></td>
+			</tr>
+		</table>
+	</div>
+	<div class="profile">
+		<table>
+			<tr>
+				<td colspan="3" class="center"><img src="{$_SESSION.profile}"
+					alt="头像" class="img-circle" style="" /></td>
+			</tr>
+			<tr>
+				<td class="left" valign="bottom"><font size="2">已上{$score|count}节课</font></td>
+				<td class="center" valign="bottom"><font size="4">{$user.name}</font></td>
+				<td class="right" valign="bottom"><font size="2">{$user.jointime|date='Y-m-d',###}加入</font></td>
+			</tr>
+		</table>
+	</div>
+	<div class="content">
+		<table style="margin-bottom: 50px;">
+			<volist name="score" id="s">
+			<tr height="59px">
+				<td class="left">{$s.content}</td>
+				<td class="left">{$s.time|date='m-d H:i',###}</td>
+				<td><empty name="s['score']">未签到<else />{$s.score}分</empty>
+				</td>
+				<td><label id="{$s.id}" onclick="score(this);"
+					style="color: #f2b500;">&gt;</label></td>
+				<if condition="$_SESSION['idstr'] eq 100"> <label id="{$s.id}"
+					onclick="score(this);" style="color: #f2b500;">&gt;</label> 
+				</if>
+			</tr>
+			
+			</volist>
+		</table>
+
+		<if condition="($user.admin eq '0')">
+		<div>
+			<img id="add_activity" src="__PUBLIC__/img/add_activity.png"
+				width="60px" height="60px" onclick="create();" />
+		</div>
+		</if>
+	</div>
+	<script>
+		function loginOut() {
+			var result = confirm("您确定要退出吗");
+			if (result == true) {
+				
+				location.href = "{:U('Login/logout')}";
+				//location.href = "{:U('Oauth/register')}";
+			}
+		}
+		function create() {
+			location.href = "{:U('Activity/create')}";
+		}
+		function score(obj) {
+			location.href = "{:U('Activity/show_activity')}/activity_id/" + obj.id;
+		}
+	</script>
+</body>
+</html>

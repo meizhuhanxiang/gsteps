@@ -1,0 +1,66 @@
+[ 2015-10-17T01:49:41+08:00 ] 180.76.15.143 /shop/tpl/static/js/public/public.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000304s ]
+ERR: 无法加载模块:Shop
+
+[ 2015-10-17T02:04:41+08:00 ] 180.76.15.163 /shop/tpl/static/js/list/list.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000378s ]
+ERR: 无法加载模块:Shop
+
+[ 2015-10-17T02:24:18+08:00 ] 207.46.13.82 /robots.txt
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000328s ]
+ERR: 无法加载模块:Robots
+
+[ 2015-10-17T05:16:54+08:00 ] 23.110.80.42 http://www.sogou.com/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+ERR: 无法加载模块:Index
+
+[ 2015-10-17T06:50:05+08:00 ] 185.25.151.159 http://testp3.pospr.waw.pl/testproxy.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+ERR: 无法加载模块:Testproxy
+
+[ 2015-10-17T16:05:05+08:00 ] 185.25.151.159 http://testp2.czar.bielawa.pl/testproxy.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000304s ]
+ERR: 无法加载模块:Testproxy
+
+[ 2015-10-17T16:09:12+08:00 ] 66.249.65.91 /robots.txt
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000374s ]
+ERR: 无法加载模块:Robots
+
+[ 2015-10-17T16:37:05+08:00 ] 207.46.13.82 /robots.txt
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+ERR: 无法加载模块:Robots
+
+[ 2015-10-17T17:35:30+08:00 ] 69.30.198.202 /robots.txt
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000373s ]
+ERR: 无法加载模块:Robots
+
+[ 2015-10-17T18:44:08+08:00 ] 62.210.97.48 /robots.txt
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000320s ]
+ERR: 无法加载模块:Robots
+
+[ 2015-10-17T20:59:48+08:00 ] 218.30.116.8 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+ERR: 无法加载模块:Favicon
+
