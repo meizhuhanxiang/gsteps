@@ -53,6 +53,7 @@ class IndexController extends CommonController {
 		->where(array('s.user_id' => $idstr))
 		->select();
 		$score = M()->query("select s.score, ac.time, ac.content, ac.id, ac.user_id from activity as ac left join (select * from score where user_id='".$idstr."') s on s.activity_id=ac.id;");
+		$score = M()->query("select s.score, ac.time, ac.content, ac.id, ac.user_id from score as s left join activity as ac  on s.activity_id=ac.id where s.user_id='".$idstr."';");
 		$info =  array();
 		$info["user"]=$user;
 		$info["score"] = $score;
