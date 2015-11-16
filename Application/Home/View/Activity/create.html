@@ -126,7 +126,7 @@ display:none;
 		</p>	
 		<p>
 	        <label>时间:</label>
-			<input type="datetime-local" name="user_date" />
+			<input id="poluoluo_datetime" name="poluoluo.com" type="datetime-local"/>
 		</p>
 		<p>
 	        <label for="place">地点:</label>
@@ -139,9 +139,16 @@ display:none;
 		var name = $("#name").val();
 		var time = $("#poluoluo_datetime").val();
 		var place = $("#place").val();
-		var url = "{:U('Activity/create_ajax')}/content/"+name+"/time/"+time+"/place/"+place;
-		alert(url);
-		location.href=url;
+		time = time.replace('T', ' ');
+		time = time.split('\.')[0]
+		if(name&&time&&place){
+			var url = "{:U('Activity/create_ajax')}/content/"+name+"/time/"+time+"/place/"+place;
+
+			location.href=url;
+		}else{
+			alert("内容/时间/地点不能为空");
+		}
+
 	}
 	</script>
 </body>
