@@ -105,12 +105,8 @@ class LoginController extends Controller {
 	 */
 	public function logout() {
 		// 清楚所有session
-		$access_token = $_SESSION['token']['access_token'];
-		$params = array();
-		$params["access_token"] = $access_token;
-		$this->post2("https://api.weibo.com/oauth2/revokeoauth2", $params);
 		$_SESSION = Array ();
-		redirect ( U('Oauth/index'));
+		redirect ( U('Oauth/wechat_index'));
 	}
 	public  function post2($url, $data) { // file_get_content
 		$postdata = http_build_query ($data );
