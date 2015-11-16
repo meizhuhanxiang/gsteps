@@ -44,6 +44,9 @@
 			</span>
 			<span class="code2">
 				<img src="<?php echo U('Activity/get_qrcode');?>/url/<?php echo ($url); ?>"/>
+				<em class="code2big" style="display:none;">
+					<img src="<?php echo U('Activity/get_qrcode');?>/url/<?php echo ($url); ?>"/>
+				</em>
 			</span>
 		</div>
 	</div>
@@ -63,6 +66,16 @@
 		</table>
 	</div>
 	<script>
+	   function code(){
+			$('.code2').click(function(){
+				$(this).children('.code2big').show();
+				event.stopPropagation();   
+			})
+		}	
+		code();	
+		$(".code2big").click(function(event){
+			$(this).hide();
+		}); 
 		function loginOut() {
 			var result = confirm("您确定要退出吗");
 			if (result == true) {

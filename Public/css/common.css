@@ -127,7 +127,7 @@ table, tr td {
 .code2big{
 	position: absolute;
 	right: 0;
-	top: 0;
+	top: -65px;
 }
 .profile1 .code2big img{
 	width: 140px;

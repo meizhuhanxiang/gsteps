@@ -12858,3 +12858,1775 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000401s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000448s ]
 
+[ 2015-11-16T15:02:56+08:00 ] 218.30.116.9 /Home/Index/info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000312s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000425s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0010s ]
+SQL: SELECT `idstr`,`name`,`admin`,`jointime` FROM `users` WHERE `idstr` = '1369364404' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `score` [ RunTime:0.0008s ]
+SQL: SELECT s.user_id,s.admin_id,s.score,ac.time,ac.content,ac.id FROM score as s join activity as ac on s.activity_id=ac.id  WHERE s.user_id = '1369364404'  [ RunTime:0.0004s ]
+SQL: select s.score, ac.time, ac.content, ac.id, ac.user_id from activity as ac left join (select * from score where user_id='1369364404') s on s.activity_id=ac.id; [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007905s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007959s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000141s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000428s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000488s ]
+
+[ 2015-11-16T15:03:00+08:00 ] 218.30.116.8 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000433s ]
+SQL: select * from activity where id=356 [ RunTime:0.0008s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007663s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007720s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000138s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000179s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000478s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000531s ]
+
+[ 2015-11-16T15:03:02+08:00 ] 218.30.116.9 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000341s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000469s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000507s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000579s ]
+
+[ 2015-11-16T15:03:23+08:00 ] 218.30.116.10 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000418s ]
+SQL: select * from activity where id=356 [ RunTime:0.0003s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007156s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007209s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000142s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000195s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000465s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000528s ]
+
+[ 2015-11-16T15:03:24+08:00 ] 218.30.116.3 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000476s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000579s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000656s ]
+
+[ 2015-11-16T15:03:29+08:00 ] 218.30.116.3 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000501s ]
+SQL: select * from activity where id=356 [ RunTime:0.0004s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010779s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010838s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000145s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000502s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000559s ]
+
+[ 2015-11-16T15:03:29+08:00 ] 218.30.116.3 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000364s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000463s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000666s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000749s ]
+
+[ 2015-11-16T15:03:37+08:00 ] 218.30.116.3 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000316s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000418s ]
+SQL: select * from activity where id=356 [ RunTime:0.0004s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007484s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007550s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000157s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000490s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000539s ]
+
+[ 2015-11-16T15:03:38+08:00 ] 218.30.116.3 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000387s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000436s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000616s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000696s ]
+
+[ 2015-11-16T15:03:39+08:00 ] 218.30.116.3 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000490s ]
+SQL: select * from activity where id=356 [ RunTime:0.0004s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006887s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006941s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000136s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000400s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000448s ]
+
+[ 2015-11-16T15:03:41+08:00 ] 218.30.116.3 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000480s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000641s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000741s ]
+
+[ 2015-11-16T15:03:42+08:00 ] 218.30.116.4 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000494s ]
+
+[ 2015-11-16T15:03:42+08:00 ] 218.30.116.3 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000355s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000483s ]
+
+[ 2015-11-16T15:03:42+08:00 ] 218.30.116.3 /Home/Index/info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000310s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000426s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0008s ]
+SQL: SELECT `idstr`,`name`,`admin`,`jointime` FROM `users` WHERE `idstr` = '1369364404' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `score` [ RunTime:0.0005s ]
+SQL: SELECT s.user_id,s.admin_id,s.score,ac.time,ac.content,ac.id FROM score as s join activity as ac on s.activity_id=ac.id  WHERE s.user_id = '1369364404'  [ RunTime:0.0003s ]
+SQL: select s.score, ac.time, ac.content, ac.id, ac.user_id from activity as ac left join (select * from score where user_id='1369364404') s on s.activity_id=ac.id; [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007134s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007184s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000142s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000193s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000395s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000440s ]
+
+[ 2015-11-16T15:03:46+08:00 ] 218.30.116.10 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000326s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000428s ]
+SQL: select * from activity where id=356 [ RunTime:0.0004s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009787s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009847s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000207s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000452s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000531s ]
+
+[ 2015-11-16T15:03:48+08:00 ] 218.30.116.3 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000300s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000395s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000501s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000569s ]
+
+[ 2015-11-16T15:04:04+08:00 ] 218.30.116.9 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000327s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000375s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000424s ]
+SQL: select * from activity where id=356 [ RunTime:0.0004s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007056s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007110s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000138s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000178s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000454s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000503s ]
+
+[ 2015-11-16T15:04:04+08:00 ] 218.30.116.9 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000549s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000572s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000650s ]
+
+[ 2015-11-16T15:04:41+08:00 ] 218.30.116.8 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000414s ]
+SQL: select * from activity where id=356 [ RunTime:0.0003s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007642s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007756s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000171s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000213s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000478s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000529s ]
+
+[ 2015-11-16T15:04:41+08:00 ] 218.30.116.10 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000475s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000464s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000523s ]
+
+[ 2015-11-16T15:04:52+08:00 ] 218.30.116.4 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000418s ]
+SQL: select * from activity where id=356 [ RunTime:0.0003s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007386s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007441s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000187s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000411s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000460s ]
+
+[ 2015-11-16T15:04:52+08:00 ] 218.30.116.4 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000599s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000673s ]
+
+[ 2015-11-16T15:05:05+08:00 ] 218.30.116.4 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000315s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000422s ]
+SQL: select * from activity where id=356 [ RunTime:0.0003s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010999s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011064s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000202s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000435s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000485s ]
+
+[ 2015-11-16T15:05:06+08:00 ] 218.30.116.9 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000398s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000503s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000632s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000711s ]
+
+[ 2015-11-16T15:08:05+08:00 ] 203.208.60.175 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000448s ]
+NOTIC: [8] Undefined index: token /alidata/www/gsteps/Application/Home/Controller/OauthController.class.php 第 15 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007691s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007750s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000170s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000559s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000624s ]
+
+[ 2015-11-16T15:08:19+08:00 ] 180.76.15.156 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000421s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000480s ]
+NOTIC: [8] Undefined index: token /alidata/www/gsteps/Application/Home/Controller/OauthController.class.php 第 15 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005402s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005460s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000142s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000404s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000452s ]
+
+[ 2015-11-16T15:09:22+08:00 ] 218.30.116.10 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000326s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000441s ]
+SQL: select * from activity where id=356 [ RunTime:0.0004s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007286s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007341s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000185s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000428s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000479s ]
+
+[ 2015-11-16T15:09:22+08:00 ] 218.30.116.9 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000319s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000421s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000469s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000547s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000622s ]
+
+[ 2015-11-16T15:09:24+08:00 ] 218.30.116.10 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000496s ]
+SQL: select * from activity where id=356 [ RunTime:0.0003s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006994s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007044s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000133s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000174s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000494s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000543s ]
+
+[ 2015-11-16T15:09:25+08:00 ] 218.30.116.10 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000383s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000461s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000526s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000550s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000619s ]
+
+[ 2015-11-16T15:09:41+08:00 ] 180.76.15.21 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000483s ]
+NOTIC: [8] Undefined index: token /alidata/www/gsteps/Application/Home/Controller/OauthController.class.php 第 15 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005486s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005586s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000186s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000518s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000567s ]
+
+[ 2015-11-16T15:10:09+08:00 ] 218.30.116.3 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000375s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000424s ]
+SQL: select * from activity where id=356 [ RunTime:0.0004s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007402s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007459s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000140s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000197s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000439s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000491s ]
+
+[ 2015-11-16T15:10:09+08:00 ] 218.30.116.3 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000307s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000506s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000476s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000553s ]
+
+[ 2015-11-16T15:10:10+08:00 ] 218.30.116.10 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000385s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000494s ]
+SQL: select * from activity where id=356 [ RunTime:0.0003s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007257s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007311s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000192s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000283s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000394s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000443s ]
+
+[ 2015-11-16T15:10:10+08:00 ] 218.30.116.10 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000515s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000488s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000552s ]
+
+[ 2015-11-16T15:10:13+08:00 ] 218.30.116.8 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000363s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000485s ]
+SQL: select * from activity where id=356 [ RunTime:0.0004s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007720s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007775s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000158s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000201s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000479s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000550s ]
+
+[ 2015-11-16T15:10:13+08:00 ] 218.30.116.10 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000304s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000417s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000467s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000529s ]
+
+[ 2015-11-16T15:10:30+08:00 ] 218.30.116.9 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000435s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+SQL: select * from activity where id=356 [ RunTime:0.0004s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007154s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007210s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000180s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000394s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000443s ]
+
+[ 2015-11-16T15:10:31+08:00 ] 218.30.116.8 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000319s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000596s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000677s ]
+
+[ 2015-11-16T15:10:34+08:00 ] 218.30.116.8 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000566s ]
+SQL: select * from activity where id=356 [ RunTime:0.0003s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000090s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007118s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007172s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000137s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000176s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000429s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000478s ]
+
+[ 2015-11-16T15:10:34+08:00 ] 218.30.116.8 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000381s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000481s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000675s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000763s ]
+
+[ 2015-11-16T15:10:36+08:00 ] 218.30.116.4 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000380s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000570s ]
+SQL: select * from activity where id=356 [ RunTime:0.0004s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007258s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007315s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000141s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000182s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000456s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000506s ]
+
+[ 2015-11-16T15:10:37+08:00 ] 218.30.116.8 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000355s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000413s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000735s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000822s ]
+
+[ 2015-11-16T15:11:17+08:00 ] 218.30.116.8 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000390s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000502s ]
+SQL: select * from activity where id=356 [ RunTime:0.0003s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000166s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020370s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020456s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000225s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000302s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000436s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000486s ]
+
+[ 2015-11-16T15:11:18+08:00 ] 218.30.116.10 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000565s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000637s ]
+
+[ 2015-11-16T15:11:19+08:00 ] 218.30.116.4 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000418s ]
+SQL: select * from activity where id=356 [ RunTime:0.0004s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007489s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007542s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000161s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000203s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000468s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000517s ]
+
+[ 2015-11-16T15:11:19+08:00 ] 218.30.116.10 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000504s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000665s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000750s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000622s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000700s ]
+
+[ 2015-11-16T15:11:47+08:00 ] 218.30.116.10 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000341s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000399s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000449s ]
+SQL: select * from activity where id=356 [ RunTime:0.0003s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007628s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007682s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000181s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000455s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000506s ]
+
+[ 2015-11-16T15:11:47+08:00 ] 218.30.116.9 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000421s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000505s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000579s ]
+
+[ 2015-11-16T15:11:51+08:00 ] 218.30.116.9 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000433s ]
+SQL: select * from activity where id=356 [ RunTime:0.0003s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007498s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007567s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000138s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000178s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000435s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000491s ]
+
+[ 2015-11-16T15:11:51+08:00 ] 218.30.116.9 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000390s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000476s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000525s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000479s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000546s ]
+
+[ 2015-11-16T15:12:02+08:00 ] 218.30.116.9 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000491s ]
+SQL: select * from activity where id=356 [ RunTime:0.0004s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007432s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007483s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000135s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000175s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000447s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000496s ]
+
+[ 2015-11-16T15:12:02+08:00 ] 218.30.116.9 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000317s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000433s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000597s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000674s ]
+
+[ 2015-11-16T15:12:12+08:00 ] 111.207.151.66 /Home/Index/info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000310s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000422s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0008s ]
+SQL: SELECT `idstr`,`name`,`admin`,`jointime` FROM `users` WHERE `idstr` = '2740889450' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `score` [ RunTime:0.0005s ]
+SQL: SELECT s.user_id,s.admin_id,s.score,ac.time,ac.content,ac.id FROM score as s join activity as ac on s.activity_id=ac.id  WHERE s.user_id = '2740889450'  [ RunTime:0.0003s ]
+SQL: select s.score, ac.time, ac.content, ac.id, ac.user_id from activity as ac left join (select * from score where user_id='2740889450') s on s.activity_id=ac.id; [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007233s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007284s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000183s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000475s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000523s ]
+
+[ 2015-11-16T15:12:19+08:00 ] 111.207.151.66 /Home/Activity/show_activity/activity_id/357
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000307s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000426s ]
+SQL: select * from activity where id=357 [ RunTime:0.0004s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=357) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007925s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007983s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000143s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000185s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000410s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000469s ]
+
+[ 2015-11-16T15:12:19+08:00 ] 111.207.151.66 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMjc0MDg4OTQ1MC9hY3Rpdml0eV9pZC8zNTc=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000320s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000430s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000487s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000547s ]
+
+[ 2015-11-16T15:12:27+08:00 ] 111.207.151.66 /Home/Activity/show_activity/activity_id/357
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000304s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000420s ]
+SQL: select * from activity where id=357 [ RunTime:0.0004s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=357) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007115s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007169s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000178s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000392s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000439s ]
+
+[ 2015-11-16T15:12:27+08:00 ] 111.207.151.66 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMjc0MDg4OTQ1MC9hY3Rpdml0eV9pZC8zNTc=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000365s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000653s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000710s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000814s ]
+
+[ 2015-11-16T15:13:35+08:00 ] 61.174.9.81 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000485s ]
+NOTIC: [8] Undefined index: token /alidata/www/gsteps/Application/Home/Controller/OauthController.class.php 第 15 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006041s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006098s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000140s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000403s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000451s ]
+
+[ 2015-11-16T15:13:54+08:00 ] 218.30.116.9 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000304s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000417s ]
+NOTIC: [8] Undefined index: token /alidata/www/gsteps/Application/Home/Controller/OauthController.class.php 第 15 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005053s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005111s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000195s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000392s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000436s ]
+
+[ 2015-11-16T15:13:58+08:00 ] 218.30.116.4 /home/oauth/callback?code=c49d4b17d919efde2574d96904c39eb9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000494s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000490s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST no longer accepts the value 1, value 2 will be used instead /alidata/www/gsteps/ThinkPHP/Library/Vendor/weibo2/saetv2.php 第 357 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST no longer accepts the value 1, value 2 will be used instead /alidata/www/gsteps/ThinkPHP/Library/Vendor/weibo2/saetv2.php 第 357 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST no longer accepts the value 1, value 2 will be used instead /alidata/www/gsteps/ThinkPHP/Library/Vendor/weibo2/saetv2.php 第 357 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` WHERE `idstr` = '1909115235' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: last_url /alidata/www/gsteps/Application/Home/Controller/OauthController.class.php 第 60 行.
+
+[ 2015-11-16T15:13:58+08:00 ] 218.30.116.4 /Home/Index/info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000307s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000414s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000464s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0008s ]
+SQL: SELECT `idstr`,`name`,`admin`,`jointime` FROM `users` WHERE `idstr` = '1909115235' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `score` [ RunTime:0.0005s ]
+SQL: SELECT s.user_id,s.admin_id,s.score,ac.time,ac.content,ac.id FROM score as s join activity as ac on s.activity_id=ac.id  WHERE s.user_id = '1909115235'  [ RunTime:0.0003s ]
+SQL: select s.score, ac.time, ac.content, ac.id, ac.user_id from activity as ac left join (select * from score where user_id='1909115235') s on s.activity_id=ac.id; [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007581s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007633s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000187s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000466s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000515s ]
+
+[ 2015-11-16T15:14:10+08:00 ] 218.30.116.3 /Home/Activity/show_activity/activity_id/353
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000324s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000477s ]
+SQL: select * from activity where id=353 [ RunTime:0.0003s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=353) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007477s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007531s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000144s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000418s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000467s ]
+
+[ 2015-11-16T15:14:10+08:00 ] 218.30.116.9 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTkwOTExNTIzNS9hY3Rpdml0eV9pZC8zNTM=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000707s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000784s ]
+
+[ 2015-11-16T15:14:28+08:00 ] 61.146.178.190 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000318s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000504s ]
+NOTIC: [8] Undefined index: token /alidata/www/gsteps/Application/Home/Controller/OauthController.class.php 第 15 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000192s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006083s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000223s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000267s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000520s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000572s ]
+
+[ 2015-11-16T15:16:24+08:00 ] 218.30.116.9 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000312s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000466s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000540s ]
+SQL: select * from activity where id=356 [ RunTime:0.0004s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007337s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007392s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000138s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000178s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000468s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000517s ]
+
+[ 2015-11-16T15:16:25+08:00 ] 218.30.116.9 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000304s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000469s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000611s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000721s ]
+
+[ 2015-11-16T15:16:59+08:00 ] 218.30.116.8 /Home/Activity/show_activity/activity_id/353
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000440s ]
+NOTIC: [8] Undefined index: token /alidata/www/gsteps/Application/Home/Controller/CommonController.class.php 第 25 行.
+
+[ 2015-11-16T15:16:59+08:00 ] 218.30.116.8 /Home/Oauth/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000409s ]
+NOTIC: [8] Undefined index: token /alidata/www/gsteps/Application/Home/Controller/OauthController.class.php 第 15 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000081s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004899s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004982s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000187s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000394s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000441s ]
+
+[ 2015-11-16T15:17:01+08:00 ] 218.30.116.8 /home/oauth/callback?code=319e04aa91e82b586f98e687d74aac3f
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000522s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST no longer accepts the value 1, value 2 will be used instead /alidata/www/gsteps/ThinkPHP/Library/Vendor/weibo2/saetv2.php 第 357 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST no longer accepts the value 1, value 2 will be used instead /alidata/www/gsteps/ThinkPHP/Library/Vendor/weibo2/saetv2.php 第 357 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST no longer accepts the value 1, value 2 will be used instead /alidata/www/gsteps/ThinkPHP/Library/Vendor/weibo2/saetv2.php 第 357 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` WHERE `idstr` = '1369364404' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-11-16T15:17:02+08:00 ] 218.30.116.8 /Home/Activity/show_activity/activity_id/353
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000381s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000419s ]
+SQL: select * from activity where id=353 [ RunTime:0.0004s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=353) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007174s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007230s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000145s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000477s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000528s ]
+
+[ 2015-11-16T15:17:02+08:00 ] 218.30.116.8 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTkwOTExNTIzNS9hY3Rpdml0eV9pZC8zNTM=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000427s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000575s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000651s ]
+
+[ 2015-11-16T15:17:07+08:00 ] 218.30.116.10 /Home/Activity/show_activity/activity_id/353
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000310s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000508s ]
+SQL: select * from activity where id=353 [ RunTime:0.0004s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=353) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007506s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007560s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000153s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000194s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000455s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000505s ]
+
+[ 2015-11-16T15:17:07+08:00 ] 218.30.116.10 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTkwOTExNTIzNS9hY3Rpdml0eV9pZC8zNTM=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000317s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000431s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000615s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000693s ]
+
+[ 2015-11-16T15:17:13+08:00 ] 218.30.116.3 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000487s ]
+
+[ 2015-11-16T15:17:13+08:00 ] 218.30.116.3 /Home/Index/info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000370s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000482s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0008s ]
+SQL: SELECT `idstr`,`name`,`admin`,`jointime` FROM `users` WHERE `idstr` = '1369364404' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `score` [ RunTime:0.0005s ]
+SQL: SELECT s.user_id,s.admin_id,s.score,ac.time,ac.content,ac.id FROM score as s join activity as ac on s.activity_id=ac.id  WHERE s.user_id = '1369364404'  [ RunTime:0.0003s ]
+SQL: select s.score, ac.time, ac.content, ac.id, ac.user_id from activity as ac left join (select * from score where user_id='1369364404') s on s.activity_id=ac.id; [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007169s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007221s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000140s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000184s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000451s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000503s ]
+
+[ 2015-11-16T15:17:15+08:00 ] 218.30.116.3 /Home/Activity/show_activity/activity_id/361
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000414s ]
+SQL: select * from activity where id=361 [ RunTime:0.0004s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=361) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007159s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007214s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000136s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000177s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000386s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000483s ]
+
+[ 2015-11-16T15:17:15+08:00 ] 218.30.116.3 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNjE=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000472s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000551s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000625s ]
+
+[ 2015-11-16T15:20:02+08:00 ] 218.30.116.3 /Home/Index/info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000319s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000506s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0008s ]
+SQL: SELECT `idstr`,`name`,`admin`,`jointime` FROM `users` WHERE `idstr` = '1909115235' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `score` [ RunTime:0.0006s ]
+SQL: SELECT s.user_id,s.admin_id,s.score,ac.time,ac.content,ac.id FROM score as s join activity as ac on s.activity_id=ac.id  WHERE s.user_id = '1909115235'  [ RunTime:0.0003s ]
+SQL: select s.score, ac.time, ac.content, ac.id, ac.user_id from activity as ac left join (select * from score where user_id='1909115235') s on s.activity_id=ac.id; [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007557s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007610s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000138s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000184s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000443s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000508s ]
+
+[ 2015-11-16T15:20:45+08:00 ] 218.30.116.3 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000403s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000479s ]
+NOTIC: [8] Undefined index: token /alidata/www/gsteps/Application/Home/Controller/OauthController.class.php 第 15 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000090s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005128s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005191s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000192s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000420s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000467s ]
+
+[ 2015-11-16T15:20:49+08:00 ] 218.30.116.9 /home/oauth/callback?code=4506c1df797074cae56bdc23a605eaf4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000452s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000517s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000569s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST no longer accepts the value 1, value 2 will be used instead /alidata/www/gsteps/ThinkPHP/Library/Vendor/weibo2/saetv2.php 第 357 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST no longer accepts the value 1, value 2 will be used instead /alidata/www/gsteps/ThinkPHP/Library/Vendor/weibo2/saetv2.php 第 357 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST no longer accepts the value 1, value 2 will be used instead /alidata/www/gsteps/ThinkPHP/Library/Vendor/weibo2/saetv2.php 第 357 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` WHERE `idstr` = '1909115235' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: last_url /alidata/www/gsteps/Application/Home/Controller/OauthController.class.php 第 60 行.
+
+[ 2015-11-16T15:20:49+08:00 ] 218.30.116.9 /Home/Index/info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000406s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000485s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0008s ]
+SQL: SELECT `idstr`,`name`,`admin`,`jointime` FROM `users` WHERE `idstr` = '1909115235' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `score` [ RunTime:0.0005s ]
+SQL: SELECT s.user_id,s.admin_id,s.score,ac.time,ac.content,ac.id FROM score as s join activity as ac on s.activity_id=ac.id  WHERE s.user_id = '1909115235'  [ RunTime:0.0003s ]
+SQL: select s.score, ac.time, ac.content, ac.id, ac.user_id from activity as ac left join (select * from score where user_id='1909115235') s on s.activity_id=ac.id; [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007238s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007290s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000183s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000467s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000515s ]
+
+[ 2015-11-16T15:20:55+08:00 ] 218.30.116.10 /Home/Activity/show_activity/activity_id/355
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000410s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000541s ]
+SQL: select * from activity where id=355 [ RunTime:0.0004s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=355) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007452s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007511s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000137s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000183s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000442s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000507s ]
+
+[ 2015-11-16T15:20:55+08:00 ] 218.30.116.10 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTkwOTExNTIzNS9hY3Rpdml0eV9pZC8zNTU=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000363s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000443s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000518s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000591s ]
+
+[ 2015-11-16T15:21:09+08:00 ] 218.30.116.9 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000314s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000420s ]
+SQL: select * from activity where id=356 [ RunTime:0.0003s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007579s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007632s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000144s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000397s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000447s ]
+
+[ 2015-11-16T15:21:10+08:00 ] 218.30.116.10 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000414s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000474s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000538s ]
+
+[ 2015-11-16T15:21:12+08:00 ] 218.30.116.9 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000420s ]
+SQL: select * from activity where id=356 [ RunTime:0.0003s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007664s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007720s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000138s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000179s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000385s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000433s ]
+
+[ 2015-11-16T15:21:13+08:00 ] 218.30.116.4 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000330s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000433s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000530s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000606s ]
+
+[ 2015-11-16T15:21:28+08:00 ] 218.30.116.10 /Home/Index/info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000474s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0008s ]
+SQL: SELECT `idstr`,`name`,`admin`,`jointime` FROM `users` WHERE `idstr` = '1909115235' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `score` [ RunTime:0.0005s ]
+SQL: SELECT s.user_id,s.admin_id,s.score,ac.time,ac.content,ac.id FROM score as s join activity as ac on s.activity_id=ac.id  WHERE s.user_id = '1909115235'  [ RunTime:0.0004s ]
+SQL: select s.score, ac.time, ac.content, ac.id, ac.user_id from activity as ac left join (select * from score where user_id='1909115235') s on s.activity_id=ac.id; [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007650s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007708s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000165s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000214s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000434s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000553s ]
+
+[ 2015-11-16T15:21:32+08:00 ] 218.30.116.9 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000368s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000417s ]
+SQL: select * from activity where id=356 [ RunTime:0.0003s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007363s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007465s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000180s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000416s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000466s ]
+
+[ 2015-11-16T15:21:33+08:00 ] 218.30.116.9 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000494s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000755s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000913s ]
+
+[ 2015-11-16T15:21:39+08:00 ] 218.30.116.10 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000339s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000426s ]
+SQL: select * from activity where id=356 [ RunTime:0.0003s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007177s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007231s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000179s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000456s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000506s ]
+
+[ 2015-11-16T15:21:39+08:00 ] 218.30.116.8 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000436s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000421s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000471s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000514s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000587s ]
+
+[ 2015-11-16T15:21:40+08:00 ] 218.30.116.3 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000546s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000622s ]
+SQL: select * from activity where id=356 [ RunTime:0.0003s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007444s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007499s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000197s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000394s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000450s ]
+
+[ 2015-11-16T15:21:40+08:00 ] 218.30.116.3 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000359s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000467s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000529s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000597s ]
+
+[ 2015-11-16T15:22:03+08:00 ] 218.30.116.4 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000367s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000420s ]
+SQL: select * from activity where id=356 [ RunTime:0.0003s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007490s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007545s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000204s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000459s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000507s ]
+
+[ 2015-11-16T15:22:03+08:00 ] 218.30.116.4 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000420s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000526s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000548s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000625s ]
+
+[ 2015-11-16T15:22:09+08:00 ] 218.30.116.3 /Home/Activity/show_activity/activity_id/356
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000398s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000447s ]
+SQL: select * from activity where id=356 [ RunTime:0.0004s ]
+SQL: select u.profile, u.name, u.idstr, s.score from 
+					(select * from score where score.activity_id=356) as s join users as u on s.user_id=u.idstr
+					 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007633s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007717s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000137s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000179s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000508s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000576s ]
+
+[ 2015-11-16T15:22:09+08:00 ] 218.30.116.3 /Home/Activity/get_qrcode/url/aHR0cDovL3d3dy53ZWl5dWJiLmNuL0hvbWUvQWN0aXZpdHkvc2lnbmluL3VzZXJfaWQvMTM2OTM2NDQwNC9hY3Rpdml0eV9pZC8zNTY=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000477s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000611s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000691s ]
+
