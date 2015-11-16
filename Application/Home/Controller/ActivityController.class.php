@@ -38,7 +38,7 @@ class ActivityController extends CommonController {
 			$activity_id=$_GET["activity_id"];
 		}
 	
-		$activity = M()->query("select * from activity where id=".$activity_id);
+		$activity = M()->query("select * from activity as ac join users as u on u.idstr=ac.user_id where ac.id=".$activity_id);
 		if($activity){
 			$activity = $activity[0];
 			$url =C('URL').U('Activity/signin').'/user_id/'.$activity["user_id"].'/activity_id/'.$activity["id"];

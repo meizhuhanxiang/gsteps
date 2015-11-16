@@ -34,7 +34,7 @@
 		</table>
 		<div class="flexBox listbox">
 			<span class="uheader">
-					<img src="{$_SESSION.profile}"
+					<img src="{$profile}"
 					alt="头像" class="img-circle" style="" />
 			</span>
 			<span class="flex1 introduce">
@@ -46,9 +46,9 @@
 				<em class="code2small">
 					<img src="{:U('Activity/get_qrcode')}/url/{$url}"/>
 				</em>
-				<em class="code2big" style="display:none;">
-					<img src="{:U('Activity/get_qrcode')}/url/{$url}"/>
-				</em>
+				 <em class="code2big" style="display:none;">
+ 					<img src="{:U('Activity/get_qrcode')}/url/{$url}"/>
+ 				</em>
 			</span>
 		</div>
 	</div>
@@ -70,24 +70,23 @@
 		</table>
 	</div>
 	<script>
+	
+		$('.code2small').click(function(event){
+			$(this).hide();
+			$(this).next('.code2big').show();
+			event.stopPropagation(); 
+		});
 
-			$('.code2small').click(function(event){
-				$(this).hide();
-				$(this).next('.code2big').show();
-				event.stopPropagation(); 
-			});
-
-			$(".code2big").click(function(event){
-				$(this).hide();
-				$(this).prev('.code2small').show();
-				event.stopPropagation(); 
-			}); 
-			$("body").click(function(){
-				$('.code2big').hide();
-				$('.code2small').show();
-				//event.stopPropagation(); 
-			}); 
-
+		$(".code2big").click(function(event){
+			$(this).hide();
+			$(this).prev('.code2small').show();
+			event.stopPropagation(); 
+		}); 
+		$("body").click(function(){
+			$('.code2big').hide();
+			$('.code2small').show();
+			//event.stopPropagation(); 
+		}); 
 		function loginOut() {
 			var result = confirm("您确定要退出吗");
 			if (result == true) {
