@@ -42,7 +42,7 @@ class OauthController extends Controller{
 				$uid_get = $c->get_uid();
 				$uid = $uid_get['uid'];
 				$user_message = $c->show_user_by_id( $uid);//鏍规嵁ID鑾峰彇鐢ㄦ埛绛夊熀鏈俊鎭�				
-				$_SESSION["profile"] = $user_message["profile_image_url"];
+				$_SESSION["profile"] = $user_message["avatar_large"];
 				$sex = $user_message["gender"];
 				if($sex=="m"){
 					$sex=1;
