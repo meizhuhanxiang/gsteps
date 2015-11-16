@@ -138,6 +138,8 @@ display:none;
 	function create_ajax(){
 		var name = $("#name").val();
 		var time = $("#poluoluo_datetime").val();
+		time = time.replace('T', ' ');
+		time = time.split('\.')[0]
 		var place = $("#place").val();
 		var url = "{:U('Activity/create_ajax')}/content/"+name+"/time/"+time+"/place/"+place;
 		alert(url);

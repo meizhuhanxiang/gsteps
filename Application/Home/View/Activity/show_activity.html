@@ -43,7 +43,9 @@
 				<em class="place">{$place}</em>
 			</span>
 			<span class="code2">
-				<img src="{:U('Activity/get_qrcode')}/url/{$url}"/>
+				<em class="code2small">
+					<img src="{:U('Activity/get_qrcode')}/url/{$url}"/>
+				</em>
 				<em class="code2big" style="display:none;">
 					<img src="{:U('Activity/get_qrcode')}/url/{$url}"/>
 				</em>
@@ -68,16 +70,24 @@
 		</table>
 	</div>
 	<script>
-	   function code(){
-			$('.code2').click(function(){
-				$(this).children('.code2big').show();
-				event.stopPropagation();   
-			})
-		}	
-		code();	
-		$(".code2big").click(function(event){
-			$(this).hide();
-		}); 
+
+			$('.code2small').click(function(event){
+				$(this).hide();
+				$(this).next('.code2big').show();
+				event.stopPropagation(); 
+			});
+
+			$(".code2big").click(function(event){
+				$(this).hide();
+				$(this).prev('.code2small').show();
+				event.stopPropagation(); 
+			}); 
+			$("body").click(function(){
+				$('.code2big').hide();
+				$('.code2small').show();
+				//event.stopPropagation(); 
+			}); 
+
 		function loginOut() {
 			var result = confirm("您确定要退出吗");
 			if (result == true) {

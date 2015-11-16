@@ -16,9 +16,7 @@ class ActivityController extends CommonController {
 			$data=Array();
 			$data["content"]=$_GET["content"];
 			$data["place"]=$_GET["place"];
-			$time = $_POST["time"].":00";
-			$time = str_replace('年', '-', $time);
-			$time = str_replace('月', '-', $time);
+			$time = $_GET["time"];
 			$data["time"] = strtotime($time);
 			$data["user_id"] = session("idstr");
 			$data["create_time"] = time();
