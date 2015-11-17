@@ -25,7 +25,7 @@ class CommonController extends Controller {
 		if ($_SESSION['token']) {
 		} else {
 			$_SESSION['last_url'] = $this->get_url();
-           	$this->redirect('Oauth/index');
+           	$this->redirect('Oauth/wechat_index');
         }
     }
     function get_url() {

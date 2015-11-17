@@ -63,8 +63,9 @@
 				<span id="{$s.idstr}_score" style="display:block;">{$s.score}分</span>
 				<span><input type='text' id="{$s.idstr}_score_input" style="display:none; width:50%"/></span>
 				</td>
-				
+				<if condition="$_SESSION['idstr'] eq $idstr"> 
 				<td><input type="button" id="{$s.idstr}_mark" onclick="mark('{$s.idstr}');" value="打分"/></td>
+				</if>
 			</tr>
 			</volist>
 		</table>
