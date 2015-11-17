@@ -55,7 +55,7 @@ body{
 	width: 80%;
 	height: 40px;
 	line-height: 40px;
-	color: #999;
+	color: #fff;
 	border-radius: 0;
 	border: 0;
 	background: none;
@@ -79,6 +79,16 @@ body{
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 }
+*::-webkit-input-placeholder { 
+color: #5e5e5e; 
+} 
+*:-moz-placeholder { 
+color: #5e5e5e; 
+} 
+*:-ms-input-placeholder { 
+/* IE10+ */ 
+color: #5e5e5e; 
+} 
 label{
 color:white;
 display:none;
@@ -118,15 +128,11 @@ display:none;
 		</p>
 		<p>
 			<label for="email">邮箱:</label>
-			<input type="text" id="email" name="email" placeholder="name@360.com" required/>
+			<input type="text" id="email" name="email" required/>
 		</p>
 		<p>
 			<label for="mobile">手机:</label>
-			<input type="text" id="mobile" name="mobile" maxlength="11" placeholder="1888888888" required/>
-		</p>
-		<p>
-		<label for="wechat">微信:</label>
-			<input type="text" id="wechat" name="wechat" placeholder="请填写微信" required/>
+			<input type="text" id="mobile" name="mobile" maxlength="11" required/>
 		</p>
       <button type="submit">提交</button>
    </form>

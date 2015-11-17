@@ -15,7 +15,8 @@ return array(
 	'DEFAULT_MODULE' =>  'Home',  // 默认模块
 	'DEFAULT_CONTROLLER' =>  'Oauth', // 默认控制器名称
 	'DEFAULT_ACTION' =>  'wechat_index', // 默认操作名称
-	'URL'=>'http://www.gsteps.cn',
+	'URL'=>'http://www.weiyubb.cn',
 	'URL_HTML_SUFFIX'=>'',
-	'APPID' => 'wx9e8843162b182d8f'
+	'APPID' => 'wx9e8843162b182d8f',
+	'SECRET' => '70a38224340503d1416e9157c0c554b1'
 );

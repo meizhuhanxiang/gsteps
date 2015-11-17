@@ -81,7 +81,6 @@ class OauthController extends Controller{
 			$code_url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=".C("APPID")."&redirect_uri=".urlencode($callback)."&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
 			$info['aurl'] = $code_url;
 			$info['auth'] = 'no';
-			var_dump($code_url);
 			$this->assign($info);
 			$this->display();
 		}else{$info['auth'] = 'yes';
@@ -93,7 +92,7 @@ class OauthController extends Controller{
 		$code = $_GET["code"];
 		if($code){
 			$code_url = 
-			"https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx9e8843162b182d8f&secret=70a38224340503d1416e9157c0c554b1&code=".$code."&grant_type=authorization_code";
+			"https://api.weixin.qq.com/sns/oauth2/access_token?appid=".C("APPID")."&secret=".C("SECRET")."&code=".$code."&grant_type=authorization_code";
 			$res = file_get_contents($code_url);
 			$res = json_decode($res, true);
 			if(array_key_exists("access_token", $res)){
@@ -104,7 +103,6 @@ class OauthController extends Controller{
 				$info = file_get_contents($info_url);
 				$info = json_decode($info, true);
 				if(array_key_exists("openid", $info)){
-					echo 111;
 					$_SESSION['token'] = $access_token;
 					$_SESSION["sex"] = $info["sex"];
 					$_SESSION["idstr"] = $info["openid"];
@@ -125,7 +123,7 @@ class OauthController extends Controller{
 					}
 				}
 			}else{
-				echo 111;
+				$this->redirect('Oauth/wechat_index');
 			}
 			
 		}else{
