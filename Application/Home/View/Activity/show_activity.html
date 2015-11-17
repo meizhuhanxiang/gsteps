@@ -115,17 +115,19 @@
 			}else{
 				var r = /[1-5]/g;
 				var res = r.exec($(s_i).val());
+				//alert("user_id:"+idstr+" activity_id:"+activity_id+" score"+res);
 				if(res!=null){
 					res = String(res)
 			        $.ajax({
 			            url: "{:U('Activity/mark')}",    //请求的url地址
 			            dataType: "json",   //返回格式为json
 			            async: true, //请求是否异步，默认为异步，这也是ajax重要特性
-			            data: {"user_id":idstr, "activity_id": ''+ activity_id, "score": res},    //参数值
+			            data: {"user_id":idstr, "activity_id": ''+activity_id, "score": res},    //参数值
 			            type: "POST",   //请求方式
 			            beforeSend: function() {
 			            },
 			            success: function(req) {
+			            	//alert(req.where+" score:"+req.score);
 							$(m).val("打分");
 							$(s_i).hide();
 							$(s).html(res+"分");

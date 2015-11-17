@@ -94,10 +94,10 @@ class ActivityController extends CommonController {
 		$data = array();
 		$data["user_id"] = $_POST["user_id"];
 		$data["activity_id"] = $_POST["activity_id"];
-		M("score")->where("user_id=".$data["user_id"]." and activity_id=".$data["activity_id"])->setField("score", $_POST["score"]);
+		M("score")->where("user_id='".$data["user_id"]."' and activity_id=".$data["activity_id"])->setField("score", $_POST["score"]);
 		$data["score"] = $_POST["score"];
 		$data["result"] = "success";
-		//$data['where'] = "user_id=".$data["user_id"]." and activity_id=".$data["activity_id"];
+		$data['where'] = "user_id=".$data["user_id"]." and activity_id=".$data["activity_id"];
 		$this->ajaxReturn($data);
 	}
 	function score(){
